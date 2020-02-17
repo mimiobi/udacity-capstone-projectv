@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry([ credentialsId: "docker-hub", url: "" ]) {
-                    sh 'docker push mimiobi/udacity-capstone'
+                    sh 'docker push mimiobi/udacity-capstone:latest'
                     }
                 }
             }
