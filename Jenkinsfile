@@ -23,7 +23,7 @@ pipeline {
         stage('Building image') {
             steps {
                 script {
-                    sh 'docker build --tag=udacity-capstone .'
+                    sh 'docker build --tag=mimiobi/udacity-capstone .'
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry([ credentialsId: "docker-hub", url: "" ]) {
-                    sh 'docker push mimiobi/udacity-capstone:latest'
+                    sh 'docker push mimiobi/udacity-capstone'
                     }
                 }
             }
