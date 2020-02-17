@@ -16,7 +16,7 @@ pipeline {
 
         stage ('Cloning Git') {
             steps {
-                git 'https://github.com/mimiobi/udacity-capstone-project.git'
+                git 'https://github.com/mimiobi/udacity-capstone-projectv.git'
             }
         }
 
