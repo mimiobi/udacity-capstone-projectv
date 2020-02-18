@@ -45,8 +45,8 @@ pipeline {
     stage('Verify status of blue green deployment ') {
       steps {
         script {
-          sh 'kubectl rollout status deployment/blue-green-deployment'
-          sh 'kubectl rollout history deployment/blue-green-deployment'
+          sh 'kubectl rollout status deployment blue-green-deployment'
+          sh 'kubectl rollout history deployment blue-green-deployment'
         }
 
       }
