@@ -1,18 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-deployment-blue
+  name: blue-green-deployment
   labels:
-    app: webapp-blue
+    app: blue-green-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webapp-blue
+      app: blue-green-deployment
+  strategy:
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 0%
+    type: RollingUpdate
   template:
     metadata:
       labels:
-        app: webapp-blue
+        app: blue-green-deployment
     spec:
       containers:
       - name: udacity-capstone
@@ -23,10 +28,10 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: webapp-service
+  name: blue-green-deployment
 spec:
   selector:
-    app: webapp-blue
+    app: blue-green-deployment
   ports:
   - protocol: TCP
     port: 80
