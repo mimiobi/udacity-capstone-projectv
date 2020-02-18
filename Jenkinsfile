@@ -33,7 +33,7 @@ pipeline {
       }
     }
 
-    stage('Upload latest green deployment to AWS Loadbalancer') {
+    stage('Apply blue green deployment ') {
       steps {
         script {
           sh 'kubectl apply -f deployment/green-webapp-deploy.yaml'
@@ -42,7 +42,7 @@ pipeline {
       }
     }
 
-    stage('Remove old blue deployment from AWS Loadbalancer') {
+    stage('Verify status of blue green deployment ') {
       steps {
         script {
           sh 'kubectl delete deploy/web-deployment-blue'
