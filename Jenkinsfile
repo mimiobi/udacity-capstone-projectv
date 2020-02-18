@@ -36,7 +36,7 @@ pipeline {
     stage('Apply blue green deployment ') {
       steps {
         script {
-          sh 'kubectl apply -f deployment/green-webapp-deploy.yaml'
+          sh 'kubectl apply -f deployment/blue-green-webapp-deploy.yaml'
         }
 
       }
