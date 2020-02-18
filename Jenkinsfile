@@ -42,7 +42,7 @@ pipeline {
             steps {
                script {
                    // Latest
-                   sh 'kubectl apply -f deployment/green-webapp-deploy.yml'
+                   sh 'kubectl apply -f deployment/green-webapp-deploy.yaml'
                }
             }
         }
@@ -58,7 +58,7 @@ pipeline {
         stage ('Add latest blue deployment to AWS Loadbalancer') {
             steps {
                script {
-                   sh 'kubectl apply -f deployment/blue-webapp-deploy.yml'
+                   sh 'kubectl apply -f deployment/blue-webapp-deploy.yaml'
                }
             }
         }
