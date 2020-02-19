@@ -1,4 +1,4 @@
-# Project: Continuous Integration & Deployment 
+# Project: Udacity Devops Capstone on Continuous Integration & Deployment 
 
 ## Description
 
