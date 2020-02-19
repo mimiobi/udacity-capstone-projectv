@@ -1,4 +1,4 @@
-# Project: Continuous Integration & Deployment using Cloudformation, Jenkins, Docker & Kubernetes (EKS)
+# Project: Continuous Integration & Deployment 
 
 ## Description
 
